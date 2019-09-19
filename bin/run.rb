@@ -36,7 +36,7 @@ require_relative "environment"
   Pokemon.save("Pikachu", "electric", @db)
      sql = "SELECT * FROM pokemon WHERE id = ? LIMIT 1"
      don = @db.execute(sql, 1).map do |row|
-       row.first
+       row[0]
      end
 
 
