@@ -1,10 +1,11 @@
 require_relative "environment"
 
-# Scraper.new(@db).scrape
-#
-# all_pokemon = @db.execute("SELECT * FROM pokemon;")
+Scraper.new(@db).scrape
+
+all_pokemon = @db.execute("SELECT * FROM pokemon;")
 
 # test out your code here!
+
 # def milo
 #   @db = SQLite3::Database.new('../pokemon.db')
 #   @db.execute("DROP TABLE IF EXISTS pokemon")
