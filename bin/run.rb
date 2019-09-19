@@ -40,14 +40,5 @@ all_pokemon = @db.execute("SELECT * FROM pokemon;")
 
 
 
-
-
-
-
-
-# expect(pikachu_from_db.id).to eq(1)
-# expect(pikachu_from_db.name).to eq("Pikachu")
-# expect(pikachu_from_db.type).to eq("electric")
-
 # binding.pry
 # 0
