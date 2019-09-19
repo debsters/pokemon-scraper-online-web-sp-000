@@ -34,7 +34,7 @@ require_relative "environment"
   @sql_runner.execute_schema_migration_sql
   Pokemon.new(id: 1, name: "Pikachu", type: "electric", db: @db)
   Pokemon.save("Pikachu", "electric", @db)
-     sql = "SELECT * FROM pokemon WHERE id = ? LIMIT 1"
+     sql = "SELECT * FROM pokemon WHERE id = ?"
      don = @db.execute(sql, 1).flatten
 
 
