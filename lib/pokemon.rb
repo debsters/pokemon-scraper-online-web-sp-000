@@ -14,7 +14,7 @@ class Pokemon
     INSERT INTO pokemon (name, type)
     VALUES (?, ?)
     SQL
-  
+
     db.execute(sql, name, type)
     @id = db.execute('SELECT last_insert_rowid() FROM pokemon')[0][0]
   end
@@ -25,7 +25,7 @@ class Pokemon
        Pokemon.new(id: row[0], name: row[1], type: row[2], db: db)
      end.first
   end
-  
+
 end
 
 
@@ -33,7 +33,7 @@ end
 #   db.execute("INSERT INTO pokemon (name, type) VALUES (?,?);", name, type)
 #   @id = db.execute('SELECT last_insert_rowid() FROM pokemon')[0][0]
 # end
-# 
+#
 # def self.find(id, db)
 #     row = db.execute("SELECT * FROM pokemon WHERE id = ?;", id).flatten
 #     Pokemon.new(id: row[0], name: row[1], type: row[2], db: db)
