@@ -17,8 +17,8 @@ all_pokemon = @db.execute("SELECT * FROM pokemon;")
 #   loki
 # end
 # answer to "milo" should be [[1, "Pikachu", "electric"]]
-# 
-# 
+#
+#
 #   @db = SQLite3::Database.new('../pokemon.db')
 #   @db.execute("DROP TABLE IF EXISTS pokemon")
 #   @sql_runner = SQLRunner.new(@db)
@@ -26,7 +26,7 @@ all_pokemon = @db.execute("SELECT * FROM pokemon;")
 #   Pokemon.new(id: 1, name: "Pikachu", type: "electric", db: @db)
 #   Pokemon.save("Pikachu", "electric", @db)
 #   sql = "SELECT * FROM pokemon WHERE id = ? LIMIT 1"
-# 
+#
 #   @db = SQLite3::Database.new('../pokemon.db')
 #   @db.execute("DROP TABLE IF EXISTS pokemon")
 #   @sql_runner = SQLRunner.new(@db)
@@ -35,6 +35,6 @@ all_pokemon = @db.execute("SELECT * FROM pokemon;")
 #   Pokemon.save("Pikachu", "electric", @db)
 #      sql = "SELECT * FROM pokemon WHERE id = ?"
 #      don = @db.execute(sql, 1).flatten
-# 
+#
 # binding.pry
 # 0
