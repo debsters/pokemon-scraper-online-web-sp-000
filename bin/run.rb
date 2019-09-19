@@ -29,14 +29,14 @@ all_pokemon = @db.execute("SELECT * FROM pokemon;")
   # Pokemon.save("Pikachu", "electric", @db)
   # sql = "SELECT * FROM pokemon WHERE id = ? LIMIT 1"
 
-  @db = SQLite3::Database.new('../pokemon.db')
-  @db.execute("DROP TABLE IF EXISTS pokemon")
-  @sql_runner = SQLRunner.new(@db)
-  @sql_runner.execute_schema_migration_sql
-  Pokemon.new(id: 1, name: "Pikachu", type: "electric", db: @db)
-  Pokemon.save("Pikachu", "electric", @db)
-     sql = "SELECT * FROM pokemon WHERE id = ?"
-     don = @db.execute(sql, 1).flatten
+  # @db = SQLite3::Database.new('../pokemon.db')
+  # @db.execute("DROP TABLE IF EXISTS pokemon")
+  # @sql_runner = SQLRunner.new(@db)
+  # @sql_runner.execute_schema_migration_sql
+  # Pokemon.new(id: 1, name: "Pikachu", type: "electric", db: @db)
+  # Pokemon.save("Pikachu", "electric", @db)
+  #    sql = "SELECT * FROM pokemon WHERE id = ?"
+  #    don = @db.execute(sql, 1).flatten
 
 
 
@@ -49,5 +49,5 @@ all_pokemon = @db.execute("SELECT * FROM pokemon;")
 # expect(pikachu_from_db.name).to eq("Pikachu")
 # expect(pikachu_from_db.type).to eq("electric")
 
-binding.pry
-0
+# binding.pry
+# 0
